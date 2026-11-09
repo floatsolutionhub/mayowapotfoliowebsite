@@ -36,12 +36,12 @@ export default function Hero() {
         </div>
 
         <div className="mt-6 text-center">
-          <p
+          {/* <p
             className="animate-rise mb-4 text-[11px] font-medium uppercase tracking-[0.45em] text-teal"
             style={{ animationDelay: "150ms" }}
           >
             Portfolio
-          </p>
+          </p> */}
           <h1
             className="animate-rise text-gradient text-5xl font-semibold leading-none tracking-tight sm:text-7xl"
             style={{ animationDelay: "250ms" }}

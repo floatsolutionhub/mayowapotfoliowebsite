@@ -53,12 +53,29 @@ export const services = [
   },
 ];
 
-export const caseStudies = [
+// Leave a store out to hide its button
+export type StoreLinks = { playStore?: string; appStore?: string };
+
+// Project logos live in public/logos/. Replace each placeholder PNG with the real one, keeping the file name.
+export const caseStudies: {
+  name: string;
+  title: string;
+  meta: string;
+  url: string;
+  logo: string;
+  stores?: StoreLinks;
+  challenge: string;
+  highlights: string[];
+}[] = [
   {
     name: "Ogasela",
     title: "Building a trusted, AI-assisted marketplace for a nation of 36 states",
     meta: "Consumer marketplace · Nigeria",
     url: "https://ogasela.com",
+    logo: "/logos/ogasela.png",
+    stores: {
+      playStore: "https://play.google.com/store/apps/details?id=com.app.ogasela",
+    },
     challenge:
       "Online classifieds in Nigeria are held back by trust. Ogasela needed a marketplace that felt as familiar as the local market square, but safer.",
     highlights: [
@@ -73,6 +90,7 @@ export const caseStudies = [
     title: "Delivering a secure digital platform for a leading financial services group",
     meta: "Financial services · FSDH Group",
     url: "https://elevate.fsdhgroup.com",
+    logo: "/logos/fsdh-elevate.png",
     challenge:
       "Enterprise delivery inside a regulated bank group, where security, audit trails and stakeholder alignment matter as much as features.",
     highlights: [
@@ -87,6 +105,7 @@ export const caseStudies = [
     title: "Digitising savings, loans and investments for a Lagos cooperative",
     meta: "Cooperative finance · Lagos",
     url: "https://www.bckashcoop.com",
+    logo: "/logos/bckash.png",
     challenge:
       "Members and whole market associations need contributions, loans and investments that are accurate, transparent and easy to access.",
     highlights: [
@@ -98,18 +117,31 @@ export const caseStudies = [
   },
 ];
 
-export const projects = [
+export const projects: {
+  name: string;
+  copy: string;
+  tags: string[];
+  url: string;
+  logo: string;
+  stores?: StoreLinks;
+}[] = [
   {
     name: "FSDH Policy Portal",
     copy: "A secure portal giving FSDH Group one trusted source of truth for policy documents.",
     tags: ["Enterprise", "Financial services", "Compliance"],
     url: "https://policy-portal.fsdhgroup.com",
+    logo: "/logos/fsdh-policy-portal.png",
   },
   {
     name: "Rent a Chef",
     copy: "An on-demand platform for booking vetted professional chefs for homes and events.",
     tags: ["Marketplace", "Two-sided platform", "Bookings and payments"],
     url: "https://www.rentachefapp.com",
+    logo: "/logos/rent-a-chef.png",
+    stores: {
+      playStore: "https://play.google.com/store/apps/details?id=com.app.rentachef",
+      appStore: "https://apps.apple.com/us/app/rent-a-chef-ng/id6812654118",
+    },
   },
 ];
 
@@ -141,5 +173,34 @@ export const credentials = [
     badge: "BTech",
     title: "Computer Engineering",
     copy: "A hardware-to-software foundation in systems design, networks and computing that shapes how I architect reliable systems.",
+  },
+];
+
+// TODO: replace with real quotes (with permission). Aim for a manager/CTO, a client and someone you mentored.
+// `photo` is optional (e.g. "/testimonials/jane.png"); `linkedin` lets readers verify the reference.
+export const testimonials: {
+  quote: string;
+  name: string;
+  role: string;
+  photo?: string;
+  linkedin?: string;
+}[] = [
+  {
+    quote:
+      "Placeholder: two or three sentences from a manager or CTO on a project Mayowa led and the difference it made to the business.",
+    name: "Full Name",
+    role: "CTO, Company",
+  },
+  {
+    quote:
+      "Placeholder: a client or product owner on how Mayowa took their product from idea to live customers, with one specific outcome.",
+    name: "Full Name",
+    role: "Founder, Company",
+  },
+  {
+    quote:
+      "Placeholder: someone Mayowa mentored on how working together helped them grow as an engineer.",
+    name: "Full Name",
+    role: "Software Engineer, Company",
   },
 ];

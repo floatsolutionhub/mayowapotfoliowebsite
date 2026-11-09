@@ -8,10 +8,27 @@ const poppins = Poppins({
   weight: ["200", "300", "400", "500", "600", "700"],
 });
 
+const title = "Mayowa Ajadi | Senior Software Engineer & Technical Lead (C#, React, AWS)";
+const description =
+  "Senior software engineer and ISO/IEC 42001 Lead Implementer building and running products end to end with .NET, React, Node.js and AWS.";
+
 export const metadata: Metadata = {
-  title: "Mayowa Ajadi | Senior Software Engineer & Technical Lead (C#, React, AWS)",
-  description:
-    "Senior software engineer and ISO/IEC 42001 Lead Implementer building and running products end to end with .NET, React, Node.js and AWS.",
+  // Link previews (WhatsApp, LinkedIn, X) need absolute image URLs; set NEXT_PUBLIC_SITE_URL to the live domain
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000"),
+  title,
+  description,
+  openGraph: {
+    type: "website",
+    url: "/",
+    siteName: "Mayowa Ajadi",
+    title,
+    description,
+  },
+  twitter: {
+    card: "summary",
+    title,
+    description,
+  },
 };
 
 export const viewport: Viewport = {
