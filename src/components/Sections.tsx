@@ -32,9 +32,13 @@ function Arrow() {
 
 function FloatingLogo({ src, name, delay = 0 }: { src: string; name: string; delay?: number }) {
   return (
-    <div className="animate-float relative h-16 w-16 shrink-0 sm:h-20 sm:w-20" style={{ animationDelay: `${-delay}s` }}>
-      <div aria-hidden className="absolute inset-1 rounded-2xl bg-teal/40 blur-xl" />
-      <Image src={src} alt={`${name} logo`} fill sizes="80px" className="relative object-contain drop-shadow-[0_12px_24px_rgba(0,0,0,0.35)]" />
+    <div className="animate-float relative shrink-0" style={{ animationDelay: `${-delay}s` }}>
+      <div aria-hidden className="absolute inset-2 rounded-3xl bg-teal/40 blur-xl" />
+      <div className="relative rounded-[22px] bg-white p-3 shadow-[inset_0_0_0_1px_rgba(0,18,56,0.08),inset_0_2px_6px_rgba(0,18,56,0.12),0_18px_36px_-12px_rgba(0,0,0,0.5)] sm:rounded-[26px] sm:p-3.5">
+        <div className="relative h-12 w-12 sm:h-14 sm:w-14">
+          <Image src={src} alt={`${name} logo`} fill sizes="56px" className="object-contain" />
+        </div>
+      </div>
     </div>
   );
 }
